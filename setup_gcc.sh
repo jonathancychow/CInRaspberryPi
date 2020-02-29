@@ -21,5 +21,3 @@ sudo ln -s /usr/lib/arm-linux-gnueabihf/crti.o /usr/lib/crti.o
 sudo ln -s /usr/lib/arm-linux-gnueabihf/crt1.o /usr/lib/crt1.o
 sudo ln -s /usr/lib/arm-linux-gnueabihf/crtn.o /usr/lib/crtn.o
 
-g++-9.1 -std=c++17 -Wall -pedantic test_fs.cpp -o test_fs
-./test_fs
