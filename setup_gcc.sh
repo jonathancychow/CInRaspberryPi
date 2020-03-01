@@ -1,14 +1,17 @@
 # Commands used in the video https://youtu.be/-bCG87jBDqA :
 
 sudo apt update && sudo apt upgrade -y
-
+## Clone tar to local from github
 git clone https://bitbucket.org/sol_prog/raspberry-pi-gcc-binary.git
 cd raspberry-pi-gcc-binary
 tar -xjvf gcc-9.1.0-armhf-raspbian.tar.bz2
+
+## move unzip file to /opt
 sudo mv gcc-9.1.0 /opt
 cd ..
 rm -rf raspberry-pi-gcc-binary
 
+## set env variables
 cd ~
 echo 'export PATH=/opt/gcc-9.1.0/bin:$PATH' >> ~/.bashrc
 echo 'export LD_LIBRARY_PATH=/opt/gcc-9.1.0/lib:$LD_LIBRARY_PATH' >> ~/.bashrc
