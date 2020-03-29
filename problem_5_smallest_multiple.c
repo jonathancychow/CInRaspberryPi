@@ -2,11 +2,14 @@
 #include <stdio.h> 
 #include <stdlib.h>
 
-int main() 
+int main(int argc, char *argv[])
 { 
     int i = 1; 
-    int count = 300000000;
-    int limit = 20;
+    
+    //atoi convert ascii string to integer
+    int count = atoi(argv[1]);
+    int limit = atoi(argv[2]);
+
     for (i=11; i<=count; i++){
        int j = 1 ;
        for (j=1; j<= limit; j++){
