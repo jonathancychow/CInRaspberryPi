@@ -15,9 +15,12 @@ void pointer_array() {
   printf("*ptr = %d \n", *ptr2);   // 3
   printf("*(ptr+1) = %d \n", *(ptr2+1)); // 4
 
-  for (i=0; i<=5; i++){
+  int i;
+  for (i=0; i<5; i++){
       printf("*ptr = %d \n", *(ptr2+i));   // 3
   }
+
+  printf("*ptr ++ = %d \n", *(ptr2+i)++);   // 3
 
 }
 
@@ -25,11 +28,11 @@ int main()
 {
   int* p, i = 10;
   p = &i;
-  printf("line 28 *p = %d\n",*p);
-  printf("line 29 p = %d\n",p);
+  printf("line 31 *p = %d\n",*p);
+  printf("line 32 p = %d\n",p);
   addOne(p);
 
-  printf("line 32 %d\n", *p); // 11
+  printf("line 35 %d\n", *p); // 11
 
   pointer_array();
   return 0;
