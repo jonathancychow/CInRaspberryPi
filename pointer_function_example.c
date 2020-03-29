@@ -20,7 +20,7 @@ void pointer_array() {
       printf("*ptr = %d \n", *(ptr2+i));   // 3
   }
 
-  printf("*ptr ++ = %d \n", *(ptr2+i)++);   // 3
+  printf("*ptr ++ = %d \n", *(ptr2+i)=90 );   // 3
 
 }
 
