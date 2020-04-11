@@ -16,14 +16,13 @@ int main(int argc, char *argv[])
         exit(0);
     }
 
-    printf("Enter elements: ");
+    // printf("Enter elements: ");
     for(i = 0; i < n; ++i)
     {
-        scanf("%d", ptr + i);
-        sum += *(ptr + i);
+        sum += atoi(argv[i+2]);
     }
 
-    printf("Sum = %d", sum);
+    printf("Sum = %d\n", sum);
     free(ptr);
     return 0;
 }
