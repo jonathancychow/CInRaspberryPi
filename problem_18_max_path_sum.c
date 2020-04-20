@@ -1,10 +1,20 @@
-// This is a comment 
 #include <stdio.h> 
 #include <stdlib.h>
 
-int main() 
-{ 
-    int triangle_array[15][15] = {
+// Custom max function
+int max(int a, int b){
+    int answer;
+    if (a>b){
+        answer = a;
+    }
+    else{
+        answer = b;
+    }
+    return answer;
+}
+
+int max_path_sum(int level, int pos){
+     int triangle_array[15][15] = {
         {75},
         {95, 64},
         {17, 47, 82},
@@ -22,9 +32,18 @@ int main()
         {04, 62, 98, 27, 23, 9, 70, 98, 73, 93, 38, 53, 60, 04, 23}
     };
 
+    int answer;
+    if (level==14){
+        answer = triangle_array[level][pos];
+    }
+    else{
+        answer = triangle_array[level][pos] + max ( max_path_sum(level+1, pos), max_path_sum(level+1, pos+1));
+    }
+    return answer;
+}
 
-    printf("%d is the answer\n",triangle_array[5][0]);
-    printf("%d is the answer\n",triangle_array[14][6]);
-
+int main() 
+{ 
+    printf("%d is the answer\n",max_path_sum(0,0));
     return 0; 
 } 
