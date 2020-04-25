@@ -13,9 +13,9 @@ namespace bar{
 }
 
 int main(){
-    foo:samename fromfoo;
-    bar:samename frombar;
-    fromfoo.value = 'Hello World';
+    foo::samename fromfoo;
+    bar::samename frombar;
+    fromfoo.value = "Hello";
     frombar.value = 1;
     printf("frombar %d\n",frombar.value)
     return;
