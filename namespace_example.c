@@ -21,5 +21,5 @@ int main(){
     printf("frombar %d\n",frombar.value);
     printf("fromfoo %s\n",fromfoo.value);
     printf("sum = %d\n",frombar.value + fromfoo.value2);
-    return;
+    return 0;
 }
