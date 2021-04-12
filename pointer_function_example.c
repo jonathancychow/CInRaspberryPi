@@ -9,7 +9,7 @@ void pointer_array() {
   int x[5] = {1, 2, 3, 4, 5};
   int* ptr2;
 
-  // ptr is assigned the address of the third element
+  // ptr is assigned the address of the first element
   ptr2 = &x[0]; 
 
   printf("*ptr = %d \n", *ptr2);   // 3
@@ -29,7 +29,7 @@ int main()
   int* p, i = 10;
   p = &i;
   printf("line 31 *p = %d\n",*p);
-  printf("line 32 p = %d\n",p);
+  printf("line 32 p = %p\n",p);
   addOne(p);
 
   printf("line 35 %d\n", *p); // 11
